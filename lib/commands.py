@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 #
 # Electrum - lightweight Bitcoin client
