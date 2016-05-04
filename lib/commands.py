@@ -502,6 +502,15 @@ class Commands:
         return out
 
     @command('w')
+    def getnewaddress(self):
+        """Generate a new Bitcoin address from the master seed"""
+        newaddrs = []
+        newaddress = self.wallet.create_new_address()
+        newaddrs.append(newaddress)
+        return newaddrs
+
+
+    @command('w')
     def gettransaction(self, txid):
         """Retrieve a transaction. """
         tx = self.wallet.transactions.get(txid) if self.wallet else None
